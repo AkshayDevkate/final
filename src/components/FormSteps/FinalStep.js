@@ -11,7 +11,7 @@ export class FinalStep extends Component {
         this.props.prevStep();
       };
     render () {
-        const { values, handleChange } = this.props;
+   
         return(
             <>
             <h1> We are in final step</h1>
