@@ -1,9 +1,8 @@
 
-import {BrowserRouter, Route, Link} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 // componets 
 import Main from './components/Main';
 
-import './App.css';
 
 function App() {
   return (
