@@ -12,7 +12,7 @@ export class ThirdStep extends Component {
         this.props.prevStep();
       };
     render () {
-        const { values, handleChange } = this.props;
+       
         return (
             <>
             <h1> We are in third step</h1>

@@ -10,18 +10,6 @@ export class UserForm extends Component {
 
     state = {
         step: 1,
-        ptz: '',
-        consume: '',
-        wallbox: '',
-        battery: '',
-        meters: '',
-        name:'',
-        email:'',
-        phone:'',
-        total: 0,
-        message: '',
-        sq: 0,
-        option: true,
     }
 
      // Proceed to next step
@@ -40,15 +28,11 @@ export class UserForm extends Component {
     });
   };
 
-    // Handle fields change
-    handleChange = input => e => {
-        this.setState({ [input]: e.target.value });
-      };
+
 
 render() {
     const {step} = this.state;
-    const { ptz, consume, wallbox, battery, meters, total, message, sq, option } = this.state;
-    const values = { ptz, consume, wallbox, battery, meters, total, message, sq, option};
+    
 
 
     switch (step) {
@@ -57,8 +41,7 @@ render() {
                 <>
                 <FirstStep
                 nextStep={this.nextStep}
-                handleChange={this.handleChange}
-                values={values}
+                
                 />
                 </>    
                 );
@@ -77,13 +60,7 @@ render() {
           <ThirdStep
              nextStep={this.nextStep}
              prevStep={this.prevStep}
-             handleChange={this.handleChange}
-             handlenewChange={this.handlenewChange}
-             sqtopanel={this.sqtopanel}
-             values={values}
-             meters={meters}
-             message={message}
-             sq={sq} 
+          
           />
         );
 
@@ -93,8 +70,7 @@ render() {
                 <FourthStep
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
-                handleChange={this.handleChange}
-                values={values}
+               
               />
              
             );
@@ -105,8 +81,7 @@ render() {
                     <FinalStep
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
-                    handleChange={this.handleChange}
-                    values={values}
+                    
                   /> 
                   </div>
                 );

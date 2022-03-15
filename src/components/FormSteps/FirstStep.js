@@ -10,7 +10,7 @@ export class FirstStep extends Component {
     
      
     render () {
-        const { values, handleChange } = this.props;
+    
 
         return (
        <>
