@@ -24,6 +24,12 @@ render() {
                 </>
                 
                 );
+          default: 
+          return (
+                <>
+                <FirstStep/>
+                </>
+          );      
     }
    
            

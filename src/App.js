@@ -1,5 +1,3 @@
-
-import {BrowserRouter} from "react-router-dom";
 // componets 
 import Main from './components/Main';
 
