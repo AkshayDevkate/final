@@ -7,10 +7,8 @@ import Main from './components/Main';
 function App() {
   return (
     <>
-    <BrowserRouter>
-    <Main></Main>
-    </BrowserRouter>
-       
+   <h1>Hello world</h1>
+       <Main />
     </>
 
   );
