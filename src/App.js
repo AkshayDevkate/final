@@ -10,7 +10,7 @@ function App() {
     <>
     <Heather />
        <Main />
-       <Footer/>
+    <Footer/>
      </>
 
   );

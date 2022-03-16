@@ -7,9 +7,8 @@ function Main(props){
     return(
         <>
 
-<Heather></Heather>
 <UserForm/>
-<Footer></Footer>
+
 
         </> 
     )
