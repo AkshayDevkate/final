@@ -40,22 +40,6 @@ export class UserForm extends Component {
     });
   };
 
-   // Proceed to next step
-   nextStep = () => {
-    const { step } = this.state;
-    this.setState({
-      step: step + 1
-    });
-  };
-
-  // Go back to prev step
-  prevStep = () => {
-    const { step } = this.state;
-    this.setState({
-      step: step - 1
-    });
-  };
-
   // Handle fields change
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
@@ -76,7 +60,7 @@ handlenewChange = () => {
   const {meters,battery} = this.state;
 
       //Calculating the price with battery 
-              if (battery == 'Ja')
+              if (battery === 'Ja')
               {   
               this.setState({
                 total :  ((meters * 0.37 ) * 2400 ) 
@@ -84,7 +68,7 @@ handlenewChange = () => {
             }
 
             //calculating the price without battery 
-              if (battery == 'Nein')
+              if (battery === 'Nein')
                 {
     
                 this.setState({
