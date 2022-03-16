@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import AppBar from '@material-ui/core/AppBar';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { InputLabel, MenuItem, Select } from '@material-ui/core';
+import { ProgressBar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 export class SecondStep extends Component {
@@ -24,30 +26,93 @@ export class SecondStep extends Component {
         return (
             <>
             
+            <div className="progressBar">
+        <ProgressBar>
+          <ProgressBar striped variant="success" now={25} key={1} />
+         </ProgressBar>
+      </div>
+      <MuiThemeProvider>
+        <>
+        
+        
+        <AppBar title="Enter Personal Details" />
+            <InputLabel id="demo-simple-select-label">What is your current average annual consumption?</InputLabel>
+                <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={values.consume}
+                defaultValue= {"< 4.000 kWh (3-4 Per)"}
+                label="Consume"
+                onChange={handleChange('consume')}
+                
+                >
+                <MenuItem value={"< 2.500 kWh (1-2 Per)"}>{"< 2.500 kWh (1-2 Per.)"}</MenuItem>
+                <MenuItem value={"< 4.000 kWh (3-4 Per)"}>{"< 4.000 kWh (3-4 Per.)"}</MenuItem>
+                <MenuItem value={"> 4.000 kWh (> 5 Per)"}>{"> 4.000 kWh (> 5 Per.)"}</MenuItem>
+                </Select>
+            <br/>
+            <InputLabel id="demo-simple-select-label">Should a wall box be installed for your electric vehicle?</InputLabel>
+                <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={values.wallbox}
+                defaultValue = {"Brauche ich nicht"}
+                label="Wallbox"
+                onChange={handleChange('wallbox')}
+                
+                >
+                <MenuItem value={"Ja"}>{"Yes"}</MenuItem>
+                <MenuItem value={"Brauche ich nicht"}>{"I do not need that"}</MenuItem>
+                <MenuItem value={"Ist schon installiert "}>{"Is already installed"}</MenuItem>
+                </Select>
+            <br/>
+            <InputLabel id="demo-simple-select-label">Would you also like to install battery storage?</InputLabel>
+                <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={values.battery}
+                label="Battery"
+                onChange={handleChange('battery')}
+               
+                >
+               
+                <MenuItem value={"Ja"}>{"Yes"}</MenuItem>
+                <MenuItem value={"Nein"}>{"No"}</MenuItem>
+                </Select>
+            
+            <br/>
 
+            <InputLabel id="demo-simple-select-label">How do you want to calculate your solar panels?</InputLabel>
+                <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={values.option}
+                label="Option"
+                onChange={handleChange('option')}
+                required
+                >
+                <MenuItem value = {true} >{"I know hou many moduls I want"}</MenuItem>
+                <MenuItem value={false}>{"I know the m2 of my rooftop"}</MenuItem>
+                </Select>
+            
+            <br/>
+            <div className='buttonsForm'>
+            <Button
+              color="secondary"
+              variant="contained"
+              onClick={this.back}
+            >Back</Button>
 
-<h2> We are in step 2</h2>
-          <p>What is your current average annual consumption?</p>
-      <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">City</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={values.consume }
-          label="Age"
-          onChange={handleChange('consume')}
-        >
-          <MenuItem value={"< 2.500 kWh (1-2 Per)"}>Berlin</MenuItem>
-          <MenuItem value={20}>Brandenburg</MenuItem>
-          <MenuItem value={30}>Hamburg</MenuItem>
-        </Select>
-      </FormControl>
-      </Box>
-
-      <button onClick={this.continue}> Continue </button>
+            <Button
+              style={{background: "#5a875c",color:"white"}}
+              variant="contained"
+              onClick={this.continue}
+            >Continue</Button>
+          </div>
+        </>
+      </MuiThemeProvider>
       </>
-           
+         
         );
     }
 }

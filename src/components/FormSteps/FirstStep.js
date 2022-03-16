@@ -5,10 +5,14 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { ProgressBar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from '@material-ui/core/Button';
 
 
 export class FirstStep extends Component {
  
+
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -21,17 +25,27 @@ export class FirstStep extends Component {
 
         return (
        <>
+
+        <div className="progressBar">
+        <ProgressBar>
+          <ProgressBar striped variant="success" now={2} key={1} />
+         </ProgressBar>
+      </div>
+
+      <>
+      
+      
        
        <h1> Please Enter City Name  </h1>
 
        <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <InputLabel id="demo-simple-select-label">City</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={values.city }
-          label="Age"
+          label="City Name"
           onChange={handleChange('city')}
         >
           <MenuItem value={10}>Berlin</MenuItem>
@@ -41,10 +55,16 @@ export class FirstStep extends Component {
       </FormControl>
     </Box>
        
+    </>
 
-    <button onClick={this.continue}> Continue </button>
-       </>
-            
+    <Button
+              style={{background: "#5a875c",color:"white"}}
+              variant="contained"
+              onClick={this.continue}
+            >Continue</Button>
+   
+     
+       </>   
             );
 
     }
