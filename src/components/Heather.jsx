@@ -1,4 +1,4 @@
-function Cabecera(props){
+function Cabecera(){
     return (
       <header>
         <div id= "titulos">
@@ -11,11 +11,11 @@ function Cabecera(props){
             <a href="http://greenhomenow.de/">Home</a>
                 <div class="dropdown">
                    <button class="dropbtn">
-                     <a >Unsere Leistungen</a>
+                     <a href="http://greenhomenow.de/">Unsere Leistungen</a>
                    </button>
                    <div class="dropdown-content">
-                     <a>Für Photovoltaik Kunden</a>
-                     <a>Für Installationsfirmen</a>
+                     <a href="http://greenhomenow.de/">Für Photovoltaik Kunden</a>
+                     <a href="http://greenhomenow.de/">Für Installationsfirmen</a>
                    </div>
                   </div>
               <a href="http://greenhomenow.de/" class="fusion-background-highlight"> </a>
