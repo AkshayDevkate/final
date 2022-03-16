@@ -7,9 +7,7 @@ function Main(props){
 
 <h2>very new Hello World</h2>
 <UserForm/>
-        </>
-      
-      
+        </> 
     )
 }
 
