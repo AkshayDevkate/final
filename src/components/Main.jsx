@@ -1,12 +1,16 @@
 import UserForm from "./UserForm";
+import Footer from "./Footer"
+import Heather from "./Heather"
 
 function Main(props){
     
     return(
         <>
 
-<h2>very new Hello World</h2>
+<Heather></Heather>
 <UserForm/>
+<Footer></Footer>
+
         </> 
     )
 }

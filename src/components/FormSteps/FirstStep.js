@@ -33,12 +33,8 @@ export class FirstStep extends Component {
       </div>
 
       <>
-      
-      
-       
        <h1> Please Enter City Name  </h1>
-
-       <Box sx={{ minWidth: 120 }}>
+      <Box sx={{ minWidth: 60}}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">City</InputLabel>
         <Select
