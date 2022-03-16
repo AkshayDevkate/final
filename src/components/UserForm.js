@@ -105,28 +105,36 @@ render() {
         case 1:
             return (
                 <>
+                <div className='form'>
                 <FirstStep
                 nextStep={this.nextStep}
                 handleChange={this.handleChange}
                 values={values}
                 />
+                  </div>
+                
                 </>    
                 );
                 
 
         case 2: 
         return (
-            <SecondStep
+          <div className='form'>
+             <SecondStep
             nextStep={this.nextStep}
             handleChange={this.handleChange}
             values={values}
          
             />
+
+            </div>
+           
         )
         
         case 3:
-        return (       
-          <ThirdStep
+        return (    
+          <div className='form'>
+             <ThirdStep
              nextStep={this.nextStep}
              prevStep={this.prevStep}
             handleChange={this.handleChange}
@@ -137,30 +145,36 @@ render() {
              message={message}
              sq={sq}
           />
+            </div>   
+         
         );
 
         case 4:
             return(
-              
-                <FourthStep
+              <div className='form'>
+                 <FourthStep
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 handleChange={this.handleChange}
                 values={values}
               />
+                </div>
+               
              
             );
         
             case 5:
                 return(
-                 
-                    <FinalStep
+                  <div className='form'>
+ <FinalStep
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
                    
                     values={values}
                     
                   /> 
+                    </div>
+                   
                
                 );
 
