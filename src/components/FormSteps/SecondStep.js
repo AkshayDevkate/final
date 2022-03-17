@@ -62,8 +62,8 @@ export class SecondStep extends Component {
                 
                 >
                 <MenuItem value={"Ja"}>{"Yes"}</MenuItem>
-                <MenuItem value={"Brauche ich nicht"}>{"I do not need that"}</MenuItem>
-                <MenuItem value={"Ist schon installiert "}>{"Is already installed"}</MenuItem>
+                <MenuItem value={"Brauche ich nicht"}>{"No"}</MenuItem>
+                
                 </Select>
             <br/>
             <InputLabel id="demo-simple-select-label">Would you also like to install battery storage?</InputLabel>
@@ -91,8 +91,8 @@ export class SecondStep extends Component {
                 onChange={handleChange('option')}
                 required
                 >
-                <MenuItem value = {true} >{"I know hou many moduls I want"}</MenuItem>
-                <MenuItem value={false}>{"I know the m2 of my rooftop"}</MenuItem>
+                <MenuItem value = {true} >{"I know number of solar modules"}</MenuItem>
+                <MenuItem value={false}>{"I know the size of roof in m2"}</MenuItem>
                 </Select>
             
             <br/>
