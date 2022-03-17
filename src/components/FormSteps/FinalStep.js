@@ -56,10 +56,19 @@ export class FinalStep extends Component {
             />
             <br />
             <div className='buttonsForm'>
+            
+            <Button
+              style={{background: "#5a875c",color:"white"}}
+              variant="contained"
+              onClick={this.continue}
+            >Continue</Button>
+            
+            
             <Button
               color="secondary"
               variant="contained"
               onClick={this.back}
+  
             >Back</Button>
 
           

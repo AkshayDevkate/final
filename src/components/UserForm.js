@@ -32,6 +32,13 @@ export class UserForm extends Component {
     });
   };
 
+  lastStep= () => {
+    const {step } = this.state;
+    this.setState({
+      step: 5
+    });
+  };
+
    // Go back to prev step
    prevStep = () => {
     const { step } = this.state;
@@ -110,6 +117,7 @@ render() {
                 nextStep={this.nextStep}
                 handleChange={this.handleChange}
                 values={values}
+                
                 />
                   </div>
                 
@@ -166,13 +174,12 @@ render() {
             case 5:
                 return(
                   <div className='form'>
- <FinalStep
-                    nextStep={this.nextStep}
-                    prevStep={this.prevStep}
-                   
-                    values={values}
-                    
-                  /> 
+                  <FinalStep
+                  nextStep={this.nextStep}
+                  prevStep={this.prevStep}
+                  handleChange={this.handleChange}
+                  values={values}
+                /> 
                     </div>
                    
                

@@ -7,18 +7,18 @@ function Cabecera(){
                 height="80"/>
           </a>
         </div>
-        <nav class="navbar">
+        <nav className="navbar">
             <a href="http://greenhomenow.de/">Home</a>
                 <div class="dropdown">
-                   <button class="dropbtn">
+                   <button className="dropbtn">
                      <a href="http://greenhomenow.de/">Unsere Leistungen</a>
                    </button>
-                   <div class="dropdown-content">
+                   <div className="dropdown-content">
                      <a href="http://greenhomenow.de/">Für Photovoltaik Kunden</a>
                      <a href="http://greenhomenow.de/">Für Installationsfirmen</a>
                    </div>
                   </div>
-              <a href="http://greenhomenow.de/" class="fusion-background-highlight"> </a>
+              <a href="http://greenhomenow.de/" className="fusion-background-highlight"> </a>
               <a href="http://greenhomenow.de/blog/">Photovoltaik verstehen</a>
               <a href="http://greenhomenow.de/about-us/">Über uns</a>
               <a href="http://greenhomenow.de/contact-us/">Kontakt</a>
