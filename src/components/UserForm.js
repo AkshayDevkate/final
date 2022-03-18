@@ -32,12 +32,6 @@ export class UserForm extends Component {
     });
   };
 
-  lastStep= () => {
-    const {step } = this.state;
-    this.setState({
-      step: 5
-    });
-  };
 
    // Go back to prev step
    prevStep = () => {
