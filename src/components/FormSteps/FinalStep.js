@@ -24,7 +24,7 @@ export class FinalStep extends Component {
       </div>
       <MuiThemeProvider>
         <>
-        <h1> Please provide your contact details we will rech out to you with 3 best offers from installation firms </h1>
+        <h1> We will reach out to you with 3 best offers</h1>
             <AppBar title="Kontaktdaten für die Zustellung unabhängiger Angebote von verschiedener Installationsfirmen" />
             <TextField
               placeholder="Name"
