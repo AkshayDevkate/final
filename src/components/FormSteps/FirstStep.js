@@ -42,7 +42,7 @@ export class FirstStep extends Component {
           id="demo-simple-select"
           value={values.city }
           label="City Name"
-          onChange={handleChange('city')}
+          onChange={handleChange('ptz')}
         >
           <MenuItem value={10}>Berlin</MenuItem>
           <MenuItem value={20}>Hamburg</MenuItem>

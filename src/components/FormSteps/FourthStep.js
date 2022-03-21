@@ -54,7 +54,7 @@ export class FourthStep extends Component {
               </TableCell>
               <TableCell align="center">{values.sq}</TableCell>
               <TableCell align="center">{values.battery}</TableCell>
-              <TableCell align="center">{values.ptz}</TableCell>
+              <TableCell align="center">{values.city}</TableCell>
               <TableCell align="center">{values.consume}</TableCell>
               <TableCell align="center" style={{color:"#5a875c", fontWeight:"bolder"}}>{values.total}€</TableCell>
             </TableRow>
