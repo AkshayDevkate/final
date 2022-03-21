@@ -62,7 +62,7 @@ export class SecondStep extends Component {
                 
                 >
                 <MenuItem value={"Ja"}>{"Yes"}</MenuItem>
-                <MenuItem value={"Brauche ich nicht"}>{"No"}</MenuItem>
+                <MenuItem value={"Nein"}>{"No"}</MenuItem>
                 
                 </Select>
             <br/>

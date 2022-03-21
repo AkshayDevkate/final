@@ -58,15 +58,24 @@ sqtopanel = () => {
       
 // calculating final price function
 handlenewChange = () => {
-  const {meters,battery} = this.state;
+  const {meters,battery, wallbox} = this.state;
 
       //Calculating the price with battery 
               if (battery === 'Ja')
               {   
+                if (wallbox == 'Ja'){   
               this.setState({
-                total :  ((meters * 0.37 ) * 2400 ) 
+                total :  ((meters * 0.37 ) * 2400  + 2000 ).toFixed()
               })
             }
+
+            if (wallbox == 'Nein'){
+              this.setState({
+                total :  ((meters * 0.37 ) * 2400 ).toFixed() 
+              })
+            }
+
+          }
 
             //calculating the price without battery 
               if (battery === 'Nein')
@@ -75,10 +84,17 @@ handlenewChange = () => {
                 this.setState({
                   message: "Please enter value greater than 8"
                 })
+                if (wallbox == 'Ja'){
+                  this.setState({
+                    total :  ((meters * 0.37 ) * 1400 + 2000).toFixed() 
+                  })
+                }
+                if (wallbox == 'Nein'){
+                  this.setState({
+                    total :  ((meters * 0.37 ) * 1400).toFixed() 
+                  })
+                }
                 
-                this.setState({
-                  total :  ((meters * 0.37 ) * 1400).toFixed() 
-                })
               }
 
               console.log('i am in function 1 and price ='  )
