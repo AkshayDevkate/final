@@ -41,7 +41,7 @@ export class FirstStep extends Component {
       id="highlights-demo"
       sx={{ minwidth: 60 }}
       options={top100Films}
-      onChange={handleChange('ptz')}
+     
       getOptionLabel={(option) => option.title}
       renderInput={(params) => (
         <TextField {...params} label="Enter cuty name" margin="normal" />
