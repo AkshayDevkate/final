@@ -9,8 +9,6 @@ import { ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '@material-ui/core/Button';
 
-//Autocomplete
-
 
 export class FirstStep extends Component {
  
