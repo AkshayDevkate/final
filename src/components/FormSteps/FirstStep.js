@@ -47,6 +47,7 @@ export class FirstStep extends Component {
           <MenuItem value={10}>Berlin</MenuItem>
           <MenuItem value={20}>Hamburg</MenuItem>
           <MenuItem value={30}>Frankfurt</MenuItem>
+          <MenuItem value={30}>Munich</MenuItem>
         </Select>
       </FormControl>
     </Box>
