@@ -28,7 +28,7 @@ export class FinalStep extends Component {
             <AppBar title="Kontaktdaten für die Zustellung unabhängiger Angebote von verschiedener Installationsfirmen" />
             <TextField
               placeholder="Name"
-              label="Name"
+              label="Please enter name"
               onChange={handleChange('name')}
               defaultValue={values.name}
               margin="normal"
